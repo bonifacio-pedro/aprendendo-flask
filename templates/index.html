@@ -1,0 +1,22 @@
+{% extends 'base.html' %} <!-- Basicamente estamos estendendo a base para esse arquivo -->
+
+{% block head %} 
+<title>Flask</title>
+{% endblock %}
+
+{% block body %} 
+<h1>Home</h1>
+<form action="http://127.0.0.1:5000/nome" method="post">
+    <input type="text" name="nome" placeholder="Nome">
+    <button>Enviar</button>
+</form>
+    <table>
+        <tr>
+            <td>Nome</td>
+        </tr>
+        <tr>
+            <td>{{ user }}</td>
+        </tr>
+    </table>
+
+{% endblock %}
